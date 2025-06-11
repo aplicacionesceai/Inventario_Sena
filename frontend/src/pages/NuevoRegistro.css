@@ -1,0 +1,237 @@
+/* NuevoRegistro.css - Estilo SENA Colombia */
+.registro-form {
+  max-width: 800px;
+  margin: 2rem auto;
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-top: 5px solid #0B5E1E; /* Verde SENA */
+}
+
+.registro-form h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #0B5E1E; /* Verde SENA */
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.form-section {
+  background-color: #F8F9FA;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  border-left: 4px solid #0B5E1E;
+}
+
+.form-section h3 {
+  color: #0B5E1E;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.form-row > * {
+  flex: 1;
+  min-width: 200px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+  color: #495057;
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+
+input, select, textarea {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #CED4DA;
+  border-radius: 6px;
+  margin-top: 0.25rem;
+  transition: all 0.3s;
+  background-color: #FFFFFF;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: #0B5E1E;
+  box-shadow: 0 0 0 3px rgba(11, 94, 30, 0.1);
+}
+
+select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230B5E1E'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 1.5rem;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Botones SENA */
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s;
+  min-width: 200px;
+  text-align: center;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.btn-primary {
+  background-color: #0B5E1E; /* Verde SENA */
+  color: white;
+}
+
+.btn-secondary {
+  background-color: #6C757D;
+  color: white;
+}
+
+.btn-success {
+  background-color: #28A745; /* Verde claro SENA */
+  color: white;
+}
+
+.btn:hover:not(:disabled) {
+  opacity: 0.9;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Alertas y errores */
+.alert {
+  padding: 1rem;
+  border-radius: 6px;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.alert.success {
+  background-color: #D4EDDA;
+  color: #155724;
+  border: 1px solid #C3E6CB;
+}
+
+.alert.error {
+  background-color: #F8D7DA;
+  color: #721C24;
+  border: 1px solid #F5C6CB;
+}
+
+.error {
+  color: #DC3545;
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .registro-form {
+      padding: 1.5rem;
+      margin: 1rem;
+  }
+  
+  .form-row {
+      flex-direction: column;
+      gap: 0.5rem;
+  }
+  
+  .btn {
+      width: 100%;
+  }
+}
+
+/* Animación de carga */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading-spinner {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 1s ease-in-out infinite;
+  margin-right: 0.5rem;
+}
+/* Mejoras móviles extra */
+@media (max-width: 480px) {
+  .registro-form {
+    padding: 1rem;
+    margin: 0.5rem;
+    border-radius: 0;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .form-section {
+    padding: 1rem;
+  }
+
+  input, select, textarea {
+    font-size: 0.95rem;
+    padding: 0.65rem;
+  }
+
+  .btn {
+    font-size: 0.95rem;
+    padding: 0.65rem 1rem;
+    min-width: auto;
+  }
+
+  .form-section h3 {
+    font-size: 1.1rem;
+  }
+
+  .registro-form h2 {
+    font-size: 1.5rem;
+  }
+}

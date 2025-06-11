@@ -1,0 +1,106 @@
+/* src/components/Layout.css */
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.main-content {
+  display: flex;
+  flex-grow: 1;
+  min-height: 0;
+  background-color: #f1f5f9;
+  overflow: hidden;
+}
+
+/* Área principal */
+.content-area {
+  flex-grow: 1;
+  padding: 2rem;
+  overflow-y: auto;
+  background-color: #ffffff;
+  border-top: 1px solid #e5e7eb;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Sidebar (estilo SENA) */
+.sidebar {
+  width: 200px; /* Más estrecho */
+  background-color: #0D6E3E; /* Verde institucional SENA */
+  color: white;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: transform 0.3s ease-in-out;
+  height: 100vh;
+}
+
+/* Links */
+.sidebar nav a {
+  display: block;
+  margin: 12px 0;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.sidebar nav a:hover {
+  color: #28A745; /* Verde claro para resaltar al pasar el mouse */
+  text-decoration: underline;
+}
+
+/* Botón cerrar (✖) */
+.sidebar .close-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+/* Sidebar responsive */
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 999;
+    transform: translateX(-100%);
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .sidebar .close-btn {
+    display: block;
+  }
+
+  .main-content {
+    margin-left: 0;
+  }
+}
+
+/* Header superior */
+.header {
+  display: flex;
+  align-items: center;
+  background-color: #0D6E3E; /* Verde SENA también */
+  color: white;
+  padding: 10px 20px;
+}
+
+/* Botón menú (☰) */
+.menu-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: white;
+  margin-right: 20px;
+  cursor: pointer;
+}
