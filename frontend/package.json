@@ -2,12 +2,13 @@
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
-  "scripts": {
-    "start": "npx react-scripts start",
-    "build": "npx react-scripts build",
-    "test": "npx react-scripts test",
-    "eject": "npx react-scripts eject"
-  },
+ "scripts": {
+  "start": "npx react-scripts start",
+  "build": "node node_modules/react-scripts/scripts/build.js",
+  "test": "npx react-scripts test",
+  "eject": "npx react-scripts eject"
+}
+,
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
