@@ -37,6 +37,7 @@ REST_FRAMEWORK = {
 CORS_ALLOWED_ORIGINS = [
     "https://skillful-passion-production.up.railway.app",
     "https://sena-inventario.up.railway.app",
+    "https://inventario-energetico.com"
 ]
 
 CORS_ALLOW_CREDENTIALS = True
