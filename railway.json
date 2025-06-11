@@ -1,7 +1,0 @@
-{
-  "build": {
-    "installCommand": "cd frontend && npm install",
-    "buildCommand": "cd frontend && npm run build",
-    "startCommand": "npx serve -s frontend/build"
-  }
-}
