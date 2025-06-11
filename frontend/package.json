@@ -3,10 +3,7 @@
   "version": "0.1.0",
   "private": true,
  "scripts": {
-  "start": "npx react-scripts start",
-  "build": "node node_modules/react-scripts/scripts/build.js",
-  "test": "npx react-scripts test",
-  "eject": "npx react-scripts eject"
+  "build": "node node_modules/react-scripts/scripts/build.js"
 }
 ,
   "dependencies": {
